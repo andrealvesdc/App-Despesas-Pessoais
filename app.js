@@ -90,7 +90,7 @@ function cadastrarDespesa() {
 
 
 	if(despesa.validarDados()) {
-		bd.gravar(despesa)
+		//bd.gravar(despesa)
 
 		document.getElementById('modal_titulo').innerHTML = 'Registro inserido com sucesso'
 		document.getElementById('modal_titulo_div').className = 'modal-header text-success'
@@ -120,10 +120,4 @@ function carregaListaDespesas() {
 	despesas = bd.recuperarTodosRegistros() 
 
 	console.log(despesas)
-
-	var listaDespesas = document.getElementById('listaDespesas')
-
-	despesas.forEach(function(d) {
-		listaDespesas.insertRow()
-	})
 }
